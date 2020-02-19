@@ -1,8 +1,16 @@
 import React from 'react';
+import ProductList from './ProductList';
 
 function Products() {
     return (
-        <p>Estas en products</p>
+        <section className="products">
+            <h1 className="main">Shopping cart</h1>
+            <ul className="products-list">
+                <ProductList />
+                <ProductList />
+                <ProductList />
+            </ul>
+        </section>
     )
 }
 export default Products;

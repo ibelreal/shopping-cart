@@ -9,7 +9,7 @@ class MainPage extends React.Component {
     // }
     render() {
         return (
-            <main class="App">
+            <main className="App">
                 <Products />
                 <Summary />
             </main>
