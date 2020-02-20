@@ -2,17 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function ProductList(props) {
-    console.log(props)
+
+    //Destructuring props
     const { productName, productCode, productPrice, productValue, totalPrice, imageSrc, imageAlt } = props.product;
-    // const { key } = props.key
+
     function handleValue(ev) {
         console.log(ev.target.value)
     }
+
     function substractProduct(ev) {
-        console.log(ev.target.parentNode)
+        props.substractProduct(ev.target.parentNode.id);
     }
+
     function addProduct(ev) {
-        console.log(ev.target.parentNode)
+        props.addProduct(ev.target.parentNode.id);
     }
 
     return (

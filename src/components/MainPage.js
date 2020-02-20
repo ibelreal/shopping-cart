@@ -9,6 +9,25 @@ class MainPage extends React.Component {
         this.state = {
             products: apiData
         }
+        this.substractProduct = this.substractProduct.bind(this);
+        this.addProduct = this.addProduct.bind(this);
+    }
+
+    //Function that substracts one product
+    substractProduct(id) {
+        const item = this.state.products.find(item => item.productCode === id);
+        if (item.productValue > 0) {
+            this.setState({
+                productValue: item.productValue--
+            });
+        }
+    }
+    //Function that adds one product
+    addProduct(id) {
+        const item = this.state.products.find(item => item.productCode === id);
+        this.setState({
+            productValue: item.productValue++
+        });
     }
 
 
@@ -16,7 +35,10 @@ class MainPage extends React.Component {
         console.log(this.state.products)
         return (
             <main className="App">
-                <Products products={this.state.products} />
+                <Products products={this.state.products}
+                    addProduct={this.addProduct}
+                    substractProduct={this.substractProduct}
+                />
                 <Summary />
             </main>
         );
