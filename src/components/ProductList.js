@@ -1,48 +1,57 @@
 import React from 'react';
-import image from '../images/shirt.png'
+import PropTypes from 'prop-types';
 
-function ProductList() {
+function ProductList(props) {
+    console.log(props)
+    const { productName, productCode, productPrice, productValue, totalPrice, imageSrc, imageAlt } = props.product;
+    // const { key } = props.key
+    function handleValue(ev) {
+        console.log(ev.target.value)
+    }
+    function substractProduct(ev) {
+        console.log(ev.target.parentNode)
+    }
+    function addProduct(ev) {
+        console.log(ev.target.parentNode)
+    }
+
     return (
         <li className="product row">
             <div className="col-product">
                 <figure className="product-image">
-                    <img src={image} alt="Shirt" />
-                    {/* cambia src y alt 
-                        <img src="img/mug.png" alt="Mug" />
-                        <img src="img/cap.png" alt="Cap" />
-                        */}
+                    <img src={`${imageSrc}`} alt={imageAlt} />
                     <div className="product-description">
-                        <h1>Shirt</h1>
-                        {/* <h1>Mug</h1> 
-                            <h1>Cap</h1>
-                            */}
-                        <p className="product-code">Product code X7R2OPX</p>
-                        {/* <p className="product-code">Product code X2G2OPZ</p> 
-                            <p className="product-code">Product code X3W2OPY</p>*/}
+                        <h1>{productName}</h1>
+                        <p className="product-code">Product code {productCode}</p>
                     </div>
                 </figure>
             </div>
-            <div className="col-quantity">
-                <button className="count">-</button>
-                <input type="text" className="product-quantity" value="3" />
-                {/* <input type="text" className="product-quantity" value="4" />
-                <input type="text" className="product-quantity" value="4" /> */}
-                <button className="count">+</button>
+            <div className="col-quantity" id={productCode}>
+                <button className="count" onClick={substractProduct}>-</button>
+                <input type="text" className="product-quantity" value={productValue} onChange={handleValue} />
+                <button className="count" onClick={addProduct}>+</button>
             </div>
             <div className="col-price">
-                <span className="product-price">20</span>
-                {/* <span className="product-price">5</span> 
-                    <span className="product-price">10</span
-            >*/}
+                <span className="product-price">{productPrice}</span>
+
                 <span className="product-currency currency">€</span>
             </div>
             <div className="col-total">
-                <span className="product-price">60</span>
-                {/* <span className="product-price">20</span 
-                <span className="product-price">40</span>*/}
+                <span className="product-price">{totalPrice}</span>
                 <span className="product-currency currency">€</span>
             </div>
         </li>
     );
 }
+
+ProductList.propTypes = {
+    productName: PropTypes.string,
+    productCode: PropTypes.string,
+    productPrice: PropTypes.number,
+    productValue: PropTypes.number,
+    totalPrice: PropTypes.number,
+    imageSrc: PropTypes.string,
+    imageAlt: PropTypes.string
+};
+
 export default ProductList;

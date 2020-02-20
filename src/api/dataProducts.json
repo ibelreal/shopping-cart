@@ -1,0 +1,29 @@
+[
+  {
+    "productName": "Shirt",
+    "productCode": "X7R2OPX",
+    "productPrice": 20,
+    "productValue": 0,
+    "totalPrice": 0,
+    "imageSrc": "./images/shirt.png",
+    "imageAlt": "white shirt photo"
+  },
+  {
+    "productName": "Mug",
+    "productCode": "X2G2OPZ",
+    "productPrice": 5,
+    "productValue": 0,
+    "totalPrice": 0,
+    "imageSrc": "./images/mug.png",
+    "imageAlt": "purple mug photo"
+  },
+  {
+    "productName": "Cap",
+    "productCode": "X3W2OPY",
+    "productPrice": 10,
+    "productValue": 0,
+    "totalPrice": 0,
+    "imageSrc": "./images/cap.png",
+    "imageAlt": "purple cap photo"
+  }
+]
