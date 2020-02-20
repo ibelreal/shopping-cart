@@ -16,10 +16,6 @@ function ProductList(props) {
         props.addProduct(ev.target.parentNode.id);
     }
 
-    function handleValue() {
-    }
-
-
     return (
         <li className="product row">
             <div className="col-product">
@@ -33,7 +29,7 @@ function ProductList(props) {
             </div>
             <div className="col-quantity" id={productCode}>
                 <button className="count" onClick={substractProduct}>-</button>
-                <input type="text" className="product-quantity" value={productValue} onChange={handleValue} />
+                <input type="text" className="product-quantity" value={productValue} readOnly />
                 <button className="count" onClick={addProduct}>+</button>
             </div>
             <div className="col-price">
