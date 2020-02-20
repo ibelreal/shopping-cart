@@ -24,7 +24,7 @@ function Products(props) {
 Products.propTypes = {
     products: PropTypes.array.isRequired,
     addProduct: PropTypes.func.isRequired,
-    substractProduct: PropTypes.func.isRequired,
+    substractProduct: PropTypes.func.isRequired
 };
 
 export default Products;

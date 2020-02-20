@@ -4,19 +4,21 @@ import PropTypes from 'prop-types';
 function ProductList(props) {
 
     //Destructuring props
-    const { productName, productCode, productPrice, productValue, totalPrice, imageSrc, imageAlt } = props.product;
-
-    function handleValue(ev) {
-        console.log(ev.target.value)
-    }
+    const { productName, productCode, productPrice, totalPrice, productValue, imageSrc, imageAlt } = props.product;
 
     function substractProduct(ev) {
+        ev.preventDefault();
         props.substractProduct(ev.target.parentNode.id);
     }
 
     function addProduct(ev) {
+        ev.preventDefault();
         props.addProduct(ev.target.parentNode.id);
     }
+
+    function handleValue() {
+    }
+
 
     return (
         <li className="product row">
@@ -54,7 +56,9 @@ ProductList.propTypes = {
     productValue: PropTypes.number,
     totalPrice: PropTypes.number,
     imageSrc: PropTypes.string,
-    imageAlt: PropTypes.string
+    imageAlt: PropTypes.string,
+    substractProduct: PropTypes.func,
+    addProduct: PropTypes.func
 };
 
 export default ProductList;

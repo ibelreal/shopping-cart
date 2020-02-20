@@ -7,11 +7,16 @@ class MainPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            products: apiData
+            products: apiData,
+            items: 0
+
         }
         this.substractProduct = this.substractProduct.bind(this);
         this.addProduct = this.addProduct.bind(this);
+        this.handleValue = this.handleValue.bind(this);
+        this.updateTotal = this.updateTotal.bind(this);
     }
+
 
     //Function that substracts one product
     substractProduct(id) {
@@ -21,6 +26,7 @@ class MainPage extends React.Component {
                 productValue: item.productValue--
             });
         }
+        this.handleValue();
     }
     //Function that adds one product
     addProduct(id) {
@@ -28,6 +34,27 @@ class MainPage extends React.Component {
         this.setState({
             productValue: item.productValue++
         });
+
+        this.handleValue();
+    }
+
+    updateTotal(item) {
+        for (let i = 0; i < item.length; i++) {
+            let newTotal = item[i].productValue * item[i].productPrice;
+            this.setState({ totalPrice: item[i].totalPrice = newTotal });
+        }
+    }
+    updateItems(item) {
+        const nTotal = item.reduce((acc, number) => acc + number.productValue, 0);
+        console.log(nTotal);
+        this.setState({ items: nTotal });
+    }
+
+    handleValue() {
+        let item = this.state.products;
+        this.updateTotal(item);
+        this.updateItems(item);
+
     }
 
 

@@ -1,7 +1,6 @@
 import React from 'react';
 
 function Summary(props) {
-    console.log(props);
 
     return (
         <aside className="summary">
