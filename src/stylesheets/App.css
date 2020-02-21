@@ -488,3 +488,46 @@ input {
   line-height: 14px;
   cursor: pointer;
 }
+.not-found {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  font-size: 30px;
+}
+.text-end {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(33, 34, 64, 0.16);
+}
+.close-tag {
+  width: 20px;
+  position: absolute;
+  top: 32px;
+  right: 32px;
+}
+.text-detail {
+  text-align: justify;
+}
+.no-top {
+  border-top: 0;
+}
+.detail {
+  align-self: center;
+  background-color: white;
+}
+.productDetail {
+  flex: 1 1;
+}
+.countainer-image {
+  height: 90vh;
+}
+.image {
+  width: max-content;
+  object-fit: cover;
+  height: inherit;
+}
+
+.summary button[type="submit"]:hover {
+  background-color: #1c1538;
+}

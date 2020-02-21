@@ -1,7 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-function ProductList(props) {
+function Product(props) {
 
     //Destructuring props
     const { productName, productCode, productPrice, totalPrice, productValue, imageSrc, imageAlt } = props.product;
@@ -22,7 +23,9 @@ function ProductList(props) {
                 <figure className="product-image">
                     <img src={`${imageSrc}`} alt={imageAlt} />
                     <div className="product-description">
-                        <h1>{productName}</h1>
+                        <Link to={`/${productCode}/`} replace>
+                            <h1>{productName}</h1>
+                        </Link>
                         <p className="product-code">Product code {productCode}</p>
                     </div>
                 </figure>
@@ -45,7 +48,7 @@ function ProductList(props) {
     );
 }
 
-ProductList.propTypes = {
+Product.propTypes = {
     productName: PropTypes.string,
     productCode: PropTypes.string,
     productPrice: PropTypes.number,
@@ -57,4 +60,4 @@ ProductList.propTypes = {
     addProduct: PropTypes.func
 };
 
-export default ProductList;
+export default Product;

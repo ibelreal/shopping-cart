@@ -1,6 +1,12 @@
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
 function Summary(props) {
+
+    function handleClickSummary(ev) {
+        ev.preventDefault();
+        alert("Thank you for your order!")
+    }
 
     return (
         <aside className="summary">
@@ -26,9 +32,19 @@ function Summary(props) {
                         <span className="summary-total-price">{props.totalCost}</span>
                     </li>
                 </ul>
-                <button type="submit">Checkout</button>
+                <button className="summary-button" type="submit" onClick={handleClickSummary}>Checkout</button>
             </div>
         </aside>
     )
 }
+
+Summary.propTypes = {
+    items: PropTypes.number,
+    price: PropTypes.number,
+    discountMug: PropTypes.number,
+    discountShirt: PropTypes.number,
+    totalCost: PropTypes.number,
+    handleClick: PropTypes.func
+};
+
 export default Summary;

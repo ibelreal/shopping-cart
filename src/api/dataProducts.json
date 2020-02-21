@@ -6,6 +6,7 @@
     "productValue": 0,
     "totalPrice": 0,
     "imageSrc": "./images/shirt.png",
+    "imageDetailSrc": "./images/tshirt.jpg",
     "imageAlt": "white shirt photo"
   },
   {
