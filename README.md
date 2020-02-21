@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Shopping-cart test project
 
-## Available Scripts
+Link to server of GitHub Pages: https://github.com/ibelreal/shopping-cart
 
-In the project directory, you can run:
+### Description
 
-### `npm start`
+Hello, this is mi solution to a technical test, in which, you inherit a code in pure javascript, html & css and you have to create an app using a framework. When you start the app you will see a list of products which you can add or remove items using +/- buttons. Next to the cart, you have a summary with the order.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Used
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- React
+- Javascript
+- css
 
-### `npm test`
+## Structure of the project
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
++ src
+    + api
+        +dataProducts.json
+    + components
+        +App.js
+        +MainPage.js
+        +Products.js
+        +ProductsDetail.js
+        +ProductsList.js
+        +Summary.js
+        +TableHead.js
+    + images
+    + stylesheets
+ 
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> To saw it in local, you need to clone the repository, introduce `npm install` and execute `npm start` in the terminal and it will be open in [http://localhost:3000](http://localhost:3000)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Technical Requirements:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[x] The app should be decompose in components: The app it's made in React
 
-### `npm run eject`
+[x] Add/Remove product card items using the +/- buttons: They work, every time you click one of the buttons the number of the product will change.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[x] Calculate the totals of each product and the summary total accordingly: Using the state of React and functions every total will change according to the information.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[x] All totals in order summary should be updated whenever a product is added or removed: When you add or remove a product the summary will change.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Bonus Requirements developed:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[x] Product Detail modal: It's implemented only for shirts. But the code is prepare to grow for the other products.
 
-## Learn More
+[x] Discounts: The discounts are prepare to apply whenever you add or remove a product.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
