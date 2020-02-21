@@ -1,6 +1,6 @@
 # Shopping-cart test project
 
-Link to server of GitHub Pages: https://github.com/ibelreal/shopping-cart
+Link to server of GitHub Pages: https://ibelreal.github.io/shopping-cart/#/
 
 ### Description
 
